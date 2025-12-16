@@ -1,0 +1,144 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #191919;
+  color: #ffffff;
+  height: 100vh;
+  top: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+}
+
+input,
+button,
+select,
+textarea {
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  overflow: hidden;
+  display: block;
+  font-weight: 500;
+  outline: none;
+  font-size: 14px;
+  margin: 0;
+  background-color: #191919;
+  color: #ffffff;
+  border: 2px solid #4c8baf;
+}
+
+section {
+  margin: 20px 0;
+}
+
+body > h1 {
+  text-align: center;
+  font-size: 36px;
+  padding: 40px 0 0 0;
+}
+
+.main-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+  font-size: 24px;
+  align-items: center;
+}
+
+.main-info div {
+  text-align: center;
+}
+
+.main-info p {
+  margin: 10px 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.main-info h2 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.info-cost {
+  color: #af4c4c;
+}
+.info-income {
+  color: #4caf50;
+}
+
+#finance_form {
+  display: flex;
+  justify-content: center;
+}
+
+.finance-entries {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#finance_description {
+  border-radius: 20px 0 0 20px;
+}
+
+#submit {
+  border-radius: 0 20px 20px 0;
+  background-color: #3d97cb;
+  color: #191919;
+  transition: all 0.3s ease;
+}
+
+#submit:hover {
+  background-color: #4c8baf;
+  cursor: pointer;
+}
+
+select {
+  cursor: pointer;
+}
+
+#finance_list {
+  margin-top: 20px;
+  max-height: 300px;
+  min-height: 300px;
+  width: 500px;
+  overflow-y: auto;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #242424;
+  padding: 0 20px;
+  border-radius: 20px;
+  scrollbar-color: #4c8baf #191919;
+  scrollbar-width: thin;
+}
+
+#finance_list li {
+  padding: 10px;
+  border: 2px solid #4c8baf;
+  border-radius: 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+  align-items: center;
+}
+
+#finance_list li p {
+  text-align: center;
+}

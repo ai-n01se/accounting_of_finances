@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accounting of Finances</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style/style.css" />
+    <script type="module" defer src="./dist/main.js"></script>
+  </head>
+  <body>
+    <h1>Welcome to Accounting of Finances</h1>
+    <section class="main-info">
+      <div>
+        <h2 class="info-cost">Cost</h2>
+        <p id="cost_number">0</p>
+      </div>
+      <div>
+        <h2 class="info-balance">Balance</h2>
+        <p id="balance_number">0</p>
+      </div>
+      <div>
+        <h2 class="info-income">Income</h2>
+        <p id="income_number">0</p>
+      </div>
+    </section>
+    <section>
+      <form id="finance_form">
+        <input
+          type="text"
+          id="finance_description"
+          placeholder="Description"
+          required />
+        <input
+          type="number"
+          id="finance_amount"
+          placeholder="Amount"
+          min="0"
+          required />
+        <select id="finance_type" required>
+          <option value="" disabled selected>Select Type</option>
+          <option value="income">Income</option>
+          <option value="cost">Cost</option>
+        </select>
+        <button type="submit" id="submit">Add Finance</button>
+      </form>
+    </section>
+    <section class="finance-entries">
+      <h2>Finance Entries</h2>
+      <ul id="finance_list"></ul>
+    </section>
+  </body>
+</html>
