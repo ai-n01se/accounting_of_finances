@@ -1,13 +1,15 @@
-import { entries } from './main';
+import { entries } from './main.js';
 
-export const addNewEntry = (
-  description: string,
-  amount: number,
-  type: 'income' | 'cost'
-) => {
+interface Entry {
+  description: string;
+  amount: number;
+  type: 'income' | 'cost';
+}
+
+export const addNewEntry = (Entry: Entry) => {
   entries.push({
-    description,
-    amount,
-    type,
+    description: Entry.description,
+    amount: Entry.amount,
+    type: Entry.type,
   });
 };
