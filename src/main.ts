@@ -3,6 +3,10 @@ console.log('Hello, Accounting of Finances!');
 import { addNewEntry } from './addNewEntries.js';
 import { updateBalance } from './updateBalance.js';
 import { renderHTMLEntries } from './renderHTMLEntries.js';
+import {
+  loadEntriesFromLocalStorage,
+  saveEntriesToLocalStorage,
+} from './localStorage.js';
 
 const balanceReturn = document.getElementById('balance_number');
 const incomeReturn = document.getElementById('income_number');
@@ -44,7 +48,11 @@ btnAdd?.addEventListener('click', () => {
 
   addNewEntry({ description, amount, type });
 
+  saveEntriesToLocalStorage();
+
   render();
 });
+
+loadEntriesFromLocalStorage();
 
 render();
