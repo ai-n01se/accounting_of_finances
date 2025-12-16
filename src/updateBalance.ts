@@ -1,4 +1,4 @@
-import { entries } from './main.js';
+import { entries } from './state.js';
 
 export const updateBalance = () => {
   let balance = 0;

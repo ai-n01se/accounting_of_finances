@@ -1,9 +1,11 @@
-import { entries } from './main.js';
+import { entries } from './state.js';
 
 export const renderHTMLEntries = (listElement: HTMLElement) => {
   listElement.innerHTML = '';
 
-  entries.reverse().forEach((entry) => {
+  const entriesCopy = [...entries];
+
+  entriesCopy.reverse().forEach((entry) => {
     const li = document.createElement('li');
 
     const amount = document.createElement('p');

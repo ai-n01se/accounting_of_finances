@@ -1,15 +1,10 @@
-import { entries } from './main.js';
+import { entries } from './state.js';
+import { type Entry } from './type.js';
 
-interface Entry {
-  description: string;
-  amount: number;
-  type: 'income' | 'cost';
-}
-
-export const addNewEntry = (Entry: Entry) => {
+export const addNewEntry = (entry: Entry) => {
   entries.push({
-    description: Entry.description,
-    amount: Entry.amount,
-    type: Entry.type,
+    description: entry.description,
+    amount: entry.amount,
+    type: entry.type,
   });
 };

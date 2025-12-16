@@ -10,12 +10,6 @@ const costReturn = document.getElementById('cost_number');
 
 const listEntries = document.getElementById('finance_list');
 
-export const entries: Array<{
-  description: string;
-  amount: number;
-  type: 'income' | 'cost';
-}> = [];
-
 const form = document.getElementById('finance_form') as HTMLFormElement;
 const btnAdd = document.getElementById('submit');
 const inputDescription = document.getElementById(
